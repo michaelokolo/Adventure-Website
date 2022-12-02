@@ -210,9 +210,14 @@ h4 {
  p{
     color: #7c7c7c;
     padding: 0px 40px;
+    font-size: 12px;
  }
 
  .event1 .ctn{
+    margin-top: 30px;
+ }
+
+ .event2 .ctn{
     margin-top: 30px;
  }
 .events .event1 {
@@ -220,6 +225,8 @@ h4 {
     justify-content: center;
     text-align: center;
     width:100%;
+    display:flex;
+    flex-direction: column;
 }
 
 .events .event2 {
@@ -228,6 +235,8 @@ h4 {
     text-align: center;
     width:100%;
     font-size:16px;
+    display:flex;
+    flex-direction: column;
 }
 
 .event1 img {
@@ -240,7 +249,51 @@ h4 {
     height: 250px;
 }
 
+/*Explore section style*/
 
+.explore{
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.explore-content{
+    width:60%;
+    padding:50px;
+    margin-left: 120px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.explore-content h1{
+    font-size:  7vmin;
+    
+}
+
+.explore-content .line{
+    margin-bottom: 50px;
+    margin-left: 0;
+}
+
+.explore-content p{
+    color: rgb(221,221,221);
+    padding: 0;
+    font-size: 16px;
+    width: 55%;
+}
+
+.explore-content .ctn{
+    margin-top: 90px;
+    position: absolute;
+    top:70%;
+}
 
 /* Mobile device*/ 
 @media only screen and (max-width:850px){
