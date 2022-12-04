@@ -279,15 +279,7 @@ h4 {
 .explore-content{
     margin: 120px;
 }
-/*.explore-content{
-    width:60%;
-    height: 60%;
-    padding:50px;
-    margin-left: 120px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}*/
+
 
 .explore h1{
     font-size:  7vmin;
@@ -312,67 +304,73 @@ h4 {
 }
 
 /*==== Tour Section ====*/
-.tours {
-    display:flex;
-    height: 100vh;
+.tours{
+    display: flex;
     align-items: center;
-    justify-content: center;  
+    justify-content: space-evenly;
+}
+.tours h1{
+    font-size: 7vmin;
+    color: #484872;
 }
 
-
-.tours-left{
-    display: flex;
-    flex-direction: column;
+.tours img{
+    height:250px;
+    width:100%;
+    margin:0;
+    padding: 10px;
     
 }
 
-.tours-left .ctn{
-    align-self: flex-start;
-}
-
-.tours-left h1{
-    font-size: 7vmin;
-    color:#484872;
-}
-
-.tours-left .line{
-    margin-left:0;
-}
-
-.tours-left p{
-    margin:30px  auto;
-    padding: 0px;
-    align-self: flex-start;
-    font-size: 16px;
-}
-
-
-.tours-right{
-    display:flex;
-    flex-direction: column;
-}
-
-.tours-right1{
+.tours .tours-left{
     display: flex;
+    flex-direction: column;
+    width:100%;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.tours-right2{
+.tours .line{
+    margin-left: 0;
+    margin-bottom: 30px;
+}
+
+.tours p{
+    padding-left: 0;
+    font-size: 14px;
+}
+
+.tours .ctn{
+    margin-top: 30px;
+}
+.tours .row {
     display:flex;
+    width:100%;
 }
-.tours-right img{
-        max-width:250px;
-        height: 250px;
-        margin: 10px;
+
+.tours .row .column{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    align-items: center;
 }
+
 
 
 .footer{
     width: 100%;
-    height: 100px;
+    min-height: 100px;
     padding: 20px 80px;
     margin: 0;
     background-color: #484872;
     text-align: center;
+}
+
+.footer p{
+    color:whitesmoke;
+    margin:20px auto;
+    padding:20px auto;
 }
 /* Mobile device*/ 
 @media only screen and (max-width:850px){
@@ -401,6 +399,145 @@ h4 {
     .nav-links {
         display: none;
     }
+
+    /*=====Event Section=====*/
+    .event-section .events{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .event-section .events .event1{
+        margin:20px auto;
+    }
+
+
+
+    .event-section .events img{
+        max-width: 90%;
+    }
+
+    /*==== Explore ====*/
+
+    .explore-content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .explore-content .line {
+        margin: 5px auto 15px;
+    }
+
+    /*Tour Section*/
+
+   .tours{
+        display: flex;
+        flex-direction: column;
+       height: 100%;
+       text-align: center;
+       
+    }
+
+    .tours img{
+        max-width: 80%;
+        height: 300px;
+    }
+    .tours p{
+        font-size: 14px;
+        text-align: justify;
+        padding: 5px 10px 20px;
+        margin: 0;
+    }
+
+    .tours .ctn{
+        align-self: center;
+        margin-bottom: 30px;
+    }
+
+    .tours-left .line{
+        margin:5px auto 20px;
+    }
+
+   
+    .tours-left{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width:1100px) and (min-width:850px){
+    .tours{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width:100%;
+        height: 100%;
+    }
+
+    .tours .row{
+        display:flex;   
+    }
+
+    .tours img{
+        width:100%;
+        margin:0;
+        padding: 10px;
+    }
+
+    .tours h1{
+        text-align: center;
+    }
+
+    .tours .line{
+        align-items: center;
+    }
+    .tours p{
+        text-align: justify;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .tours .ctn{
+        margin-top: 10px;
+        margin-bottom: 30px;
+        display: inline-block;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        position: relative;
+        left:50%;
+        transform: translateX(-50%);
+    }
+    
 }
 
 
+
+/*Animations*/
+img{
+    transition: transform .3s ease;
+}
+
+img:hover{
+    transform: scale(1.02);
+}
+
+.ctn:hover{
+    background: whitesmoke;
+    color:#fc036b;
+    box-shadow: 2px 2px 5px #00000056;
+}
+
+li:hover{
+    color:#fc036b;
+    cursor:pointer;
+}
